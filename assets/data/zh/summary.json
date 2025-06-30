@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Broccoli Sprouts Supplement",
+    "image": "https://houzoumedical.com/wp-content/uploads/bro.png",
+    "description": "一种让您轻松食用超级食物西兰花芽的补充剂。每天补充特色成分萝卜硫素！裸藻（euglena）含有约60种营养成分，辣木含有约90种营养成分，它是一种\"三重超级食品\"补充剂，也含有上述成分。它还含有生物素，一种营养功能食品，有助于维持皮肤和粘膜的健康。那些希望保持健康的人非常赞赏它。",
+    "price": "1,200日元",
+    "category": "排毒净化"
+  },
+  {
+    "name": "NMN",
+    "image": "https://houzoumedical.com/wp-content/uploads/nn1.jpg",
+    "description": "除了热门成分NMN，含有 5 毫克（12.5 毫克粉末当量）2.5 倍浓缩虾青素，白藜芦醇有助于 NMN 功能，加辅酶 Q10 (COQ10)，8种维生素，叶酸，泛酸，我们已将其组合到该价格范围内产品的极限。",
+    "price": "1,280日元",
+    "category": "抗衰老"
+  },
+  {
+    "name": "Sun Screen Japan Supplement \"NutroxSun\" （30 tab）",
+    "image": "https://houzoumedical.com/wp-content/uploads/70010adcced8a23cc98399decca38d4a.jpg",
+    "description": "这是一种 Nutrox Sun 补充剂，含有世界专利成分，只能由有限数量的制造商购买。出现在电视和杂志上，这款补充剂非常受欢迎，在Qoo10销量排行榜上排名第一。为什么不喝酒并从内到外享受你的少女生活呢？",
+    "price": "1,890日元",
+    "category": "皮肤健康"
+  },
+  {
+    "name": "Maca Supplement",
+    "image": "https://houzoumedical.com/wp-content/uploads/maca.jpg",
+    "description": "富含优质秘鲁玛卡，而且还含有参、牡蛎、甲猜水坝、东革阿里、中心、毒蛇等强效成分，是帮助你重拾男子气概的\"最强补品\"。",
+    "price": "1,580日元",
+    "category": "运动营养"
+  },
+  {
+    "name": "Mulberry leaves JAPAN Supplement",
+    "image": "https://houzoumedical.com/wp-content/uploads/kuwanoha.jpg",
+    "description": "补充大量纯100%浓缩桑叶提取物，您可以每天服用 3 粒，每次 2,000 毫克。该产品还获得了 Monde Selection 的奖项。",
+    "price": "1,380日元",
+    "category": "一般健康"
+  },
+  {
+    "name": "L-Tryptophan JAPAN SUPPLEMENT",
+    "image": "https://houzoumedical.com/wp-content/uploads/imgrc0069889022.jpg",
+    "description": "除了L-色氨酸，含有维生素B6，可增强色氨酸的作用。缓慢的夜晚，清爽的早晨，这是支持您日常生活的补充剂。",
+    "price": "1,450日元",
+    "category": "大脑健康"
+  },
+  {
+    "name": "5-ALA JAPAN Supplement",
+    "image": "https://houzoumedical.com/wp-content/uploads/imgrc0076388753.jpg",
+    "description": "采用来自 Neo Pharma Japan 的正宗成分制成，这是国产5-ALA补充剂。您每天可以摄入 10 毫克 5-ALA，不使用二氧化钛。除了5-ALA，柠檬酸亚铁钠 (SFC) 增强 5-ALA 的作用，按2:1的比例混合。而且还包含眼虫（裸藻）、NMN、浓缩虾青素、烟酸、22种乳酸菌（包括加氏乳杆菌、干酪乳杆菌、电视上热门话题的罗伊氏乳杆菌）。5-ALA在未来受到越来越多的关注，以实惠的价格商业化。",
+    "price": "1,780日元",
+    "category": "抗衰老"
+  },
+  {
+    "name": "5-ALA Euglena",
+    "image": "https://houzoumedical.com/wp-content/uploads/mitocon-label.jpg",
+    "description": "含有β-烟酰胺单核苷酸（NMN）（日本制造），还原麦芽糖浆、氢化菜籽油、糊精、红葡萄叶提取物、螺旋藻、22种乳酸菌预混料（麦芽糊精、乳酸菌粉（含牛奶成分和大豆）乳糖/微晶纤维素、甘油）虾青素、鲑鱼鼻软骨提取物、5ALA、裸藻/结晶纤维素、HPMC、蔗糖酯、结冷胶、维生素E、维生素B2、维生素C、阿拉伯树胶、烟酸、泛酸钙、生物素、维生素B1、维生素B6、维生素A、叶酸、维生素B12、维生素D。",
+    "price": "6,980日元",
+    "category": "抗衰老"
+  },
+  {
+    "name": "Magnesium Oxide (MgO) Supplement JAPAN",
+    "image": "https://houzoumedical.com/wp-content/uploads/imgrc0076025293.jpg",
+    "description": "含有食用酵母、香菇提取物、玫瑰果、啤酒酵母、武靴叶提取物、蘑菇壳聚糖、氧化镁、纤维素、蔗糖脂肪酸酯、ECG、维生素B6、维生素C、烟酸、维生素E、泛酸钙、维生素B2、维生素B1、维生素A、叶酸、维生素D、维生素B12。",
+    "price": "1,298日元",
+    "category": "一般健康"
+  },
+  {
+    "name": "Moringa Capsules JAPAN Supplement",
+    "image": "https://houzoumedical.com/wp-content/uploads/imgrc0076078107.jpg",
+    "description": "主要成分为辣木粉、硬脂酸钙、胶囊。",
+    "price": "1,100日元",
+    "category": "一般健康"
+  },
+  {
+    "name": "薏米",
+    "image": "https://houzoumedical.com/wp-content/uploads/hat.jpg",
+    "description": "含有柑橘类水果迷迭香叶提取物粉末的食品，还原麦芽糖淀粉糖浆、柑橘类水果和迷迭香叶提取物粉末、卡姆果、麦芽糖糊精、糊精、石榴汁、番茄粉、氢化菜籽油、鱼胶原蛋白肽、鳄梨提取物、甜瓜提取物（小麦、甜瓜）/L-胱氨酸、万寿菊含有叶黄素的提取物。",
+    "price": "1,980日元",
+    "category": "皮肤健康"
+  },
+  {
+    "name": "L-Lysine JAPAN Supplement",
+    "image": "https://houzoumedical.com/wp-content/uploads/imgrc0076078106.jpg",
+    "description": "含有麦芽糖糊精、糊精、乳酸菌混合粉（5种双歧杆菌、17种乳酸菌）、乳糖/L-赖氨酸盐酸盐、纤维素、硬脂酸钙、精细氧化硅、维生素C、烟酸、维生素A、维生素D3、混合维生素E、维生素B1、维生素B2、维生素B6、维生素B12、生物素。",
+    "price": "1,380日元",
+    "category": "一般健康"
+  },
+  {
+    "name": "Glycine Powder Supplement",
+    "image": "https://houzoumedical.com/wp-content/uploads/gurisin.jpg",
+    "description": "主要成分为甘氨酸。",
+    "price": "1,050日元",
+    "category": "大脑健康"
+  },
+  {
+    "name": "Glycine Stick Supplement",
+    "image": "https://houzoumedical.com/wp-content/uploads/imgrc0076308221.jpg",
+    "description": "主要成分为甘氨酸。",
+    "price": "1,050日元",
+    "category": "大脑健康"
+  },
+  {
+    "name": "板藍根",
+    "image": "https://houzoumedical.com/wp-content/uploads/ban.jpg",
+    "description": "含有板蓝空提取粉（板蓝空提取物、糊精）（中国制造）、糊精、乳酸菌混合粉（5种双歧杆菌、17种乳酸菌）、乳糖（源自牛奶）/纤维素、硬脂酸钙、细硅二氧化硫、维生素C、烟酸、维生素E、泛酸钙、维生素B2、维生素B1、维生素B6、维生素A、叶酸、维生素D、维生素B12。",
+    "price": "1,680日元",
+    "category": "一般健康"
+  },
+  {
+    "name": "Arginine supplement",
+    "image": "https://houzoumedical.com/wp-content/uploads/e3d8aca2ad8bd34458d47cf7b70caac0.jpg",
+    "description": "含有明胶（猪源）/L-精氨酸、蔗糖脂肪酸酯。",
+    "price": "1,000日元",
+    "category": "运动营养"
+  },
+  {
+    "name": "L-Citrulline Supplement",
+    "image": "https://houzoumedical.com/wp-content/uploads/imgrc0076284728.jpg",
+    "description": "含有L-瓜氨酸、纤维素、硬脂酸钙、精细氧化硅、维生素C、烟酸、维生素E、泛酸钙、维生素B2、维生素B1、维生素B6、维生素A、叶酸、维生素D、维生素B12。",
+    "price": "1,200日元",
+    "category": "运动营养"
+  },
+  {
+    "name": "Arginine & Citrulline Powder",
+    "image": "https://houzoumedical.com/wp-content/uploads/mngo.png",
+    "description": "含有还原麦芽糖淀粉糖浆（日本制造）、L-瓜氨酸、芒果粉、眼虫粉、银杏叶提取物粉、含DHA加工品粉/L-精氨酸、酸味剂、木糖醇、增稠剂（瓜尔豆胶）、甜味剂（甜叶菊）、香料、胭脂树色素、维生素B6、亮氨酸、缬氨酸、异亮氨酸、（含有部分牛奶成分和大豆）。每天可摄取3,000毫克精氨酸和800毫克瓜氨酸以及2,700毫克柠檬酸，还添加了裸藻、DHA & EPA、银杏叶提取物。它还含有BCAA和维生素B6（能量补充/维持皮肤健康），是一种营养功能食品。你可以同时拿走所有东西，因其美味的芒果口味而深受人们的喜爱，受到很多育儿一代妈妈们的赞赏。",
+    "price": "2,899日元",
+    "category": "运动营养"
+  }
+]

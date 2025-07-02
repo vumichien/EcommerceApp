@@ -41,3 +41,39 @@ app.*.map.json
 
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+
+# Firebase Configuration Files - NEVER COMMIT THESE!
+ios/Runner/GoogleService-Info.plist
+android/app/google-services.json
+lib/firebase_options.dart
+**/firebase-service-account.json
+**/serviceAccount*.json
+**/google-services.json
+**/GoogleService-Info.plist
+
+# iOS Build Artifacts and Distribution
+ios/Runner\ */
+ios/*.ipa
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Flutter/ephemeral/
+**/DistributionSummary.plist
+**/ExportOptions.plist
+
+# Certificate and Key Files
+*.p12
+*.pem
+*.key
+*.crt
+*.cert
+*.keystore
+*.jks
+
+# Environment Files
+.env
+.env.*
+!.env.example
+
+# API Keys and Secrets
+**/api_keys.dart
+**/secrets.dart
+**/config.json

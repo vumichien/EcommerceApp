@@ -1,41 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../constants.dart';
-import '../home/home_screen.dart';
+import '../../providers/auth_provider.dart';
+import '../auth/login_screen.dart';
+import '../../app_wrapper.dart';
 
-class OnboardingScreen extends StatefulWidget {
+class OnboardingScreen extends ConsumerStatefulWidget {
   const OnboardingScreen({super.key});
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  ConsumerState<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
 
   final List<OnboardingData> _onboardingData = [
     OnboardingData(
       title: "Welcome to Houzou Medical",
-      description: "Your trusted partner for premium health supplements and wellness products. Quality you can count on.",
+      description:
+          "Your trusted partner for authentic Japanese health supplements. From NMN to traditional herbal remedies.",
       image: "assets/icons/medical_services.svg",
       color: kPrimaryColor,
     ),
     OnboardingData(
-      title: "Premium Health Supplements",
-      description: "Discover our carefully curated collection of NMN, vitamins, and specialized supplements for optimal health.",
+      title: "Premium NMN & Supplements",
+      description:
+          "Discover genuine Japanese NMN, collagen, placenta extracts, and other premium supplements for anti-aging and wellness.",
       image: "assets/icons/heart.svg",
       color: kSecondaryColor,
     ),
     OnboardingData(
-      title: "Expert Guidance",
-      description: "Get personalized recommendations and expert advice to help you achieve your health and wellness goals.",
+      title: "Authentic Japanese Quality",
+      description:
+          "All products are sourced directly from Japan with quality certifications. Browse by category and find what suits you best.",
       image: "assets/icons/search.svg",
       color: kSuccessColor,
     ),
     OnboardingData(
-      title: "Easy & Secure Shopping",
-      description: "Shop with confidence using our secure platform. Fast delivery and excellent customer support guaranteed.",
+      title: "Safe & Convenient Shopping",
+      description:
+          "Add to cart, track your orders, and enjoy secure payment. Fast international shipping with care.",
       image: "assets/icons/cart.svg",
       color: kAccentColor,
     ),
@@ -90,7 +97,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ],
               ),
             ),
-            
+
             // Page view
             Expanded(
               child: PageView.builder(
@@ -106,7 +113,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 },
               ),
             ),
-            
+
             // Bottom buttons
             Padding(
               padding: const EdgeInsets.all(24.0),
@@ -131,7 +138,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                         )
                       : const SizedBox(width: 80),
-                  
+
                   // Next/Get Started button
                   ElevatedButton(
                     onPressed: () {
@@ -176,12 +183,27 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void _completeOnboarding() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    // Mark onboarding as completed
     await prefs.setBool('onboarding_completed', true);
-    
+
+    // Clear any existing auth data to ensure fresh login flow
+    await prefs.remove('auth_token');
+    await prefs.remove('user_data');
+
+    // Invalidate the auth provider to force a fresh instance
+    ref.invalidate(authProvider);
+
+    // Wait a bit to ensure everything is reset
+    await Future.delayed(const Duration(milliseconds: 200));
+
     if (mounted) {
-      Navigator.pushReplacement(
+      // Navigate back to AppWrapper to let it handle the routing
+      // This ensures proper flow: AppWrapper -> LoginScreen -> (after login) -> MainNavigation
+      Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
+        MaterialPageRoute(builder: (context) => const AppWrapper()),
+        (route) => false,
       );
     }
   }
@@ -214,7 +236,7 @@ class OnboardingPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 48),
-          
+
           // Title
           Text(
             data.title,
@@ -226,7 +248,7 @@ class OnboardingPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 24),
-          
+
           // Description
           Text(
             data.description,

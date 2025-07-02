@@ -80,15 +80,29 @@ class AuthNotifier extends StateNotifier<AuthState> {
         // In a real app, you might want to validate the token with the server
         state = state.copyWith(
           isAuthenticated: true,
-          user: User.fromJson(Map<String, dynamic>.from({
-            'id': '1',
-            'name': 'Demo User',
-            'email': 'demo@example.com',
-          })),
+          user: User(
+            id: '1',
+            name: 'Demo User',
+            email: userJson, // Use the actual stored email
+          ),
+        );
+      } else {
+        // Ensure state is reset when no auth data
+        state = AuthState(
+          user: null,
+          isLoading: false,
+          error: null,
+          isAuthenticated: false,
         );
       }
     } catch (e) {
-      // Handle error silently for now
+      // Handle error and reset state
+      state = AuthState(
+        user: null,
+        isLoading: false,
+        error: null,
+        isAuthenticated: false,
+      );
     }
   }
 
@@ -100,7 +114,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
       if (email.contains('@') && password.length >= 6) {
         // Simulate API call
         await Future.delayed(const Duration(seconds: 1));
-        
+
         final user = User(
           id: '1',
           name: 'Demo User',
@@ -110,7 +124,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
         // Save to local storage
         SharedPreferences prefs = await SharedPreferences.getInstance();
         await prefs.setString('auth_token', 'demo_token_123');
-        await prefs.setString('user_data', email);
+        await prefs.setString('user_data', user.email);
 
         _apiService.setAuthToken('demo_token_123');
 
@@ -145,7 +159,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
       if (name.isNotEmpty && email.contains('@') && password.length >= 6) {
         // Simulate API call
         await Future.delayed(const Duration(seconds: 1));
-        
+
         final user = User(
           id: '1',
           name: name,
@@ -155,7 +169,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
         // Save to local storage
         SharedPreferences prefs = await SharedPreferences.getInstance();
         await prefs.setString('auth_token', 'demo_token_123');
-        await prefs.setString('user_data', email);
+        await prefs.setString('user_data', user.email);
 
         _apiService.setAuthToken('demo_token_123');
 
@@ -185,7 +199,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
   Future<void> logout() async {
     // Set loading state first
     state = state.copyWith(isLoading: true);
-    
+
     try {
       await _apiService.logout();
     } catch (e) {
@@ -226,7 +240,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
 
       // Update local storage
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      await prefs.setString('user_data', email);
+      await prefs.setString('user_data', updatedUser.email);
 
       state = state.copyWith(
         user: updatedUser,
@@ -245,6 +259,11 @@ class AuthNotifier extends StateNotifier<AuthState> {
 
   void clearError() {
     state = state.copyWith(error: null);
+  }
+
+  // Force recheck auth status (useful after onboarding)
+  Future<void> recheckAuthStatus() async {
+    await _checkAuthStatus();
   }
 }
 

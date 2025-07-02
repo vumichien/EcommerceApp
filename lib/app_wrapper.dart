@@ -50,17 +50,20 @@ class _AppWrapperState extends ConsumerState<AppWrapper> {
 
     // Watch the entire auth state to ensure we catch all changes
     final authState = ref.watch(authProvider);
-    
+
     // If loading, show splash (to prevent flickering)
     if (authState.isLoading) {
       return const SplashScreen();
     }
-    
-    // If user is authenticated and has valid user data, show main app
-    if (authState.isAuthenticated && authState.user != null) {
+
+    // Only show main app if user is authenticated AND has valid user data
+    // Be more strict about authentication check
+    if (authState.isAuthenticated &&
+        authState.user != null &&
+        authState.user!.id.isNotEmpty) {
       return const MainNavigation();
     }
-    
+
     // If not authenticated or no user data, show login
     return const LoginScreen();
   }

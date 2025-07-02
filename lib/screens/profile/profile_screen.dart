@@ -8,6 +8,7 @@ import '../../utils/app_localizations.dart';
 import '../auth/login_screen.dart';
 import '../favorites/favorites_screen.dart';
 import '../order_history/order_history_screen.dart';
+import '../debug/debug_screen.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
@@ -208,6 +209,17 @@ class ProfileScreen extends ConsumerWidget {
               icon: Icons.info_outline,
               title: ref.tr('about'),
               onTap: () => _showAboutDialog(context, ref),
+            ),
+            _buildMenuItem(
+              ref: ref,
+              icon: Icons.bug_report,
+              title: '🔥 Firebase Debug',
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DebugScreen(),
+                ),
+              ),
             ),
             const SizedBox(height: 16),
 

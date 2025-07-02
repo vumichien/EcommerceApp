@@ -220,13 +220,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: GridView.builder(
                 itemCount: filteredProducts.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  mainAxisSpacing: kDefaultPaddin,
-                  crossAxisSpacing: kDefaultPaddin,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 10,
                   childAspectRatio: 0.8,
                 ),
                 itemBuilder: (context, index) => ItemCard(
